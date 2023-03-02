@@ -18,6 +18,5 @@ public class CountWord {
                 count = 1;
             words.put(word, count);
         }
-        file.close();
     }
 }
