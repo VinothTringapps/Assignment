@@ -9,9 +9,9 @@ import java.util.logging.*;
      Scanner sc = new Scanner(System.in);
     Logger l = Logger.getLogger("Expection");
     String s = "----------------------------------";
-    final String EnterChoice="Enter the Choice :";
+    final String enterChoice ="Enter the Choice :";
     final String EnterName="Enter the Name :";
-    final String WrongChoice="Wrong Choice !";
+    final String wrongChoice="Wrong Choice !";
     int choice;
      protected void bank(){
         l.info("Bank Application");
@@ -30,7 +30,8 @@ import java.util.logging.*;
         l.info("Welcome TO The Bank");
         do {
             l.info("1.Deposit \n 2.Withdraw \n 3.Show");
-            l.info(EnterChoice);
+            l.info(enterChoice
+            );
             choice = sc.nextInt();
             switch (choice) {
                 case 1 -> {
@@ -128,7 +129,7 @@ import java.util.logging.*;
             switch (choice) {
                 case 1 -> s1.display();
                 case 2 -> s1.update();
-                default -> l.info(WrongChoice);
+                default -> l.info(wrongChoice);
             }
 
         }while(choice<=2);
@@ -236,7 +237,8 @@ import java.util.logging.*;
 
          do{
              l.info("1.InsertFirst \n 2.InsertLast\n3.InsertAtPos\n4.RemoveFirst\n5.RemoveLast\n6.RemoveAtPos\n7.Display\n8.search by Name");
-             l.info(EnterChoice);
+             l.info(enterChoice
+             );
              ch= sc.nextInt();
              switch (ch){
                  case 1->{
@@ -282,7 +284,7 @@ import java.util.logging.*;
                  }
 
                  default ->
-                         l.info(WrongChoice);
+                         l.info(wrongChoice);
 
              }
          }while(ch!=9);
@@ -333,7 +335,8 @@ import java.util.logging.*;
          Cal c=null;
          do{
              l.info("1.Addition \n 2.Subraction \n 3.Multiplication \n4.Division");
-             l.info(EnterChoice);
+             l.info(enterChoice
+             );
              ch= sc.nextInt();
              l.info("Enter the First Number :");
              getVariableA=sc.nextInt();
@@ -353,7 +356,7 @@ import java.util.logging.*;
                          c= new Division();
 
                  default ->
-                         l.info(WrongChoice);
+                         l.info(wrongChoice);
 
 
              }
@@ -416,7 +419,8 @@ import java.util.logging.*;
          HashMap <Integer,String> hash=new HashMap<>();
          do{
              l.info("1.Add\t2.size\t3.Remove\t4.display\n");
-             l.info(EnterChoice);
+             l.info(enterChoice
+             );
              choice= sc.nextInt();
 
              if(choice==1){
@@ -437,7 +441,8 @@ import java.util.logging.*;
              }
              else if(choice ==3){
                  l.info("1.value Removal\t 2.Clear\n");
-                 l.info(EnterChoice);
+                 l.info(enterChoice
+                 );
                  choice=sc.nextInt();
 
 
@@ -533,7 +538,8 @@ import java.util.logging.*;
          String s3="Enter the Number :";
          do{
              l.info("1.InsertFirst \n 2.InsertLast\n3.InsertAtPos\n4.RemoveFirst\n5.RemoveLast\n6.RemoveAtPos\n7.Display\n8.search by Name");
-             l.info(EnterChoice);
+             l.info(enterChoice
+             );
              ch= sc.nextInt();
              switch (ch){
                  case 1->{
@@ -592,7 +598,7 @@ import java.util.logging.*;
                  }
 
                  default ->
-                         l.info(WrongChoice);
+                         l.info(wrongChoice);
 
              }
          }while(ch!=9);
