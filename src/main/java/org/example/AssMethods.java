@@ -4,10 +4,10 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.logging.*;
  public class AssMethods{
-     static int count;
+     static int count=0;
      String name;
      Scanner sc = new Scanner(System.in);
-    Logger l = Logger.getLogger("Expection");
+    static Logger l = Logger.getLogger("Expection");
     String s = "----------------------------------";
      static String enterChoice ="Enter the Choice :";
      static String enterName="Enter the Name :";
@@ -206,7 +206,7 @@ import java.util.logging.*;
     }
      protected void arrayList(){
          ListMethods lm=new ListMethods();
-         int choice;
+
          do{
              l.info("1.Insert \t 2.RemoveWithPosition \t 3.Clear \t 4.Display\t 5.Size");
              choice= sc.nextInt();
@@ -224,16 +224,16 @@ import java.util.logging.*;
                  case 3-> lm.listClear();
                  case 4-> lm.display();
                  case 5-> lm.size();
+                 default -> l.info(wrongChoice);
              }
          }while (choice<6);
 
      }
      protected void linkedList(){
          LinkedListOneData linklist=new LinkedListOneData();
-         Scanner sc=new Scanner(System.in);
-         Logger l= Logger.getLogger("Contact");
+
          int ch;
-         String str="Enter the Position :";
+         String str="Enter the Position for LinkedList:";
 
          do{
              l.info("1.InsertFirst \n 2.InsertLast\n3.InsertAtPos\n4.RemoveFirst\n5.RemoveLast\n6.RemoveAtPos\n7.Display\n8.search by Name");
@@ -269,7 +269,7 @@ import java.util.logging.*;
                  case 8->
                  {
                      l.info(enterName);
-                     String name=sc.next();
+                     name=sc.next();
                      int res=linklist.search(name);
                      if(res>0)
                      {
@@ -291,10 +291,8 @@ import java.util.logging.*;
      protected void ticTacToe(){
          TicTacToe tic=new TicTacToe();
 
-
-         count=0;
          tic.printBoard();
-         String name="Player 1";
+         name="Player 1";
          HumanPlayer player1=new HumanPlayer(name,'X');
          String name1="Player 2";
          HumanPlayer player2=new HumanPlayer(name1,'O');
@@ -329,7 +327,7 @@ import java.util.logging.*;
      protected void calculator(){
          int getVariableA;
          int getVariableB;
-         Scanner sc=new Scanner(System.in);
+
          int ch;
          Cal c=null;
          do{
