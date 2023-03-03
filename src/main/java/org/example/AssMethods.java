@@ -9,9 +9,9 @@ import java.util.logging.*;
      Scanner sc = new Scanner(System.in);
     Logger l = Logger.getLogger("Expection");
     String s = "----------------------------------";
-    final static String enterChoice ="Enter the Choice :";
-    final static String enterName="Enter the Name :";
-    final static String wrongChoice="Wrong Choice !";
+     static String enterChoice ="Enter the Choice :";
+     static String enterName="Enter the Name :";
+    static String wrongChoice="Wrong Choice !";
     int choice;
      protected void bank(){
         l.info("Bank Application");
