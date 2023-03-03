@@ -6,6 +6,9 @@ import java.util.Map;
 import java.util.Scanner;
 
 class CountWord {
+    private CountWord(){
+        throw new IllegalArgumentException("Invalid");
+    }
     static void countWords(String fileName, Map<String, Integer> words) throws FileNotFoundException {
         Scanner file = new Scanner(new File(fileName));
         while (file.hasNext()) {

@@ -4,8 +4,8 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.logging.*;
  public class AssMethods{
-     static int count=0;
-     static String name;
+      int count=0;
+      String name;
      Scanner sc = new Scanner(System.in);
     static Logger l = Logger.getLogger("Expection");
     String s = "----------------------------------";
@@ -288,12 +288,12 @@ import java.util.logging.*;
              }
          }while(ch!=9);
      }
-     protected static void ticTacToe(){
+     protected  void ticTacToe(){
          TicTacToe tic=new TicTacToe();
 
          tic.printBoard();
-         AssMethods.name="Player 1";
-         HumanPlayer player1=new HumanPlayer(AssMethods.name,'X');
+         name="Player 1";
+         HumanPlayer player1=new HumanPlayer(name,'X');
          String name1="Player 2";
          HumanPlayer player2=new HumanPlayer(name1,'O');
          HumanPlayer cp;

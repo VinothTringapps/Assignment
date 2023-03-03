@@ -26,8 +26,9 @@ class HumanPlayer
     }
     boolean validMove(int row,int col)
     {
+        AssMethods assMethods =new AssMethods();
         TicTacToe.l.println("Wrong Input ");
-        AssMethods.count--;
+        assMethods.count--;
         return row>=0 && row<=2 && col>=0 && col<=2 && TicTacToe.board[row][col]==' ';
 
     }
