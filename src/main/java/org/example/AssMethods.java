@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.logging.*;
  public class AssMethods{
      static int count=0;
-     String name;
+     static String name;
      Scanner sc = new Scanner(System.in);
     static Logger l = Logger.getLogger("Expection");
     String s = "----------------------------------";
@@ -187,7 +187,7 @@ import java.util.logging.*;
         l.info("Basic Credit Card");
         l.info(s);
         l.info("Enter the  Card Holder Name :");
-        String name = sc.nextLine();
+        name = sc.nextLine();
         l.info("Enter the Card Number :");
         String cardNumber = sc.nextLine();
         l.info("Enter the Expiry Date :");
@@ -288,12 +288,12 @@ import java.util.logging.*;
              }
          }while(ch!=9);
      }
-     protected void ticTacToe(){
+     protected static void ticTacToe(){
          TicTacToe tic=new TicTacToe();
 
          tic.printBoard();
-         name="Player 1";
-         HumanPlayer player1=new HumanPlayer(name,'X');
+         AssMethods.name="Player 1";
+         HumanPlayer player1=new HumanPlayer(AssMethods.name,'X');
          String name1="Player 2";
          HumanPlayer player2=new HumanPlayer(name1,'O');
          HumanPlayer cp;
