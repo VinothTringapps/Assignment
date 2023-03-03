@@ -9,9 +9,9 @@ import java.util.logging.*;
      Scanner sc = new Scanner(System.in);
     Logger l = Logger.getLogger("Expection");
     String s = "----------------------------------";
-    final String enterChoice ="Enter the Choice :";
-    final String EnterName="Enter the Name :";
-    final String wrongChoice="Wrong Choice !";
+    final static String enterChoice ="Enter the Choice :";
+    final static String enterName="Enter the Name :";
+    final static String wrongChoice="Wrong Choice !";
     int choice;
      protected void bank(){
         l.info("Bank Application");
@@ -20,7 +20,7 @@ import java.util.logging.*;
         double amount;
         double depositAmount;
         double withDrawAmount;
-        l.info(EnterName);
+        l.info(enterName);
         name = sc.nextLine();
         l.info("\nEnter the Account Number :");
         number = sc.nextInt();
@@ -113,16 +113,16 @@ import java.util.logging.*;
         l.info("School Test ");
         l.info(s);
         School school = new School(null, null, 0);
-        String name;
+        String name1;
         String grade;
         double gradePoints;
 
-        l.info(EnterName);
-        name = sc.nextLine();
+        l.info(enterName);
+        name1 = sc.nextLine();
         school.update();
         grade = school.grade;
         gradePoints = school.gradePoints;
-        School s1 = new School(name, grade, gradePoints);
+        School s1 = new School(name1, grade, gradePoints);
          do {
             l.info("1.display /n 2.Update");
             choice = sc.nextInt();
@@ -233,35 +233,34 @@ import java.util.logging.*;
          Scanner sc=new Scanner(System.in);
          Logger l= Logger.getLogger("Contact");
          int ch;
-
+         String str="Enter the Position :";
 
          do{
              l.info("1.InsertFirst \n 2.InsertLast\n3.InsertAtPos\n4.RemoveFirst\n5.RemoveLast\n6.RemoveAtPos\n7.Display\n8.search by Name");
-             l.info(enterChoice
-             );
+             l.info(enterChoice);
              ch= sc.nextInt();
              switch (ch){
                  case 1->{
-                     l.info(EnterName);
+                     l.info(enterName);
                      String nameInsertFirst= sc.next();
                      linklist.insertFirst(nameInsertFirst);
                  }
                  case 2->{
-                     l.info(EnterName);
+                     l.info(enterName);
                      String nameInsertLast= sc.next();
                      linklist.insertLast(nameInsertLast);
                  }
                  case 3->{
-                     l.info(EnterName);
+                     l.info(enterName);
                      String nameInsertAt=sc.next();
-                     l.info("Enter the Position :");
+                     l.info(str);
                      int index=sc.nextInt();
                      linklist.insertAt(nameInsertAt,index);
                  }
                  case 4-> linklist.removeFirst();
                  case 5-> linklist.removeLast();
                  case 6-> {
-                     l.info("Enter the Position :");
+                     l.info(str);
                      int index = sc.nextInt();
                      linklist.removeAt(index);
                  }
@@ -269,7 +268,7 @@ import java.util.logging.*;
                          linklist.display();
                  case 8->
                  {
-                     l.info(EnterName);
+                     l.info(enterName);
                      String name=sc.next();
                      int res=linklist.search(name);
                      if(res>0)
@@ -429,7 +428,7 @@ import java.util.logging.*;
                  l.info("Enter the Roll No :");
                  rollNo=sc.nextInt();
                  sc.nextLine();
-                 l.info(EnterName);
+                 l.info(enterName);
                  name=sc.nextLine();
 
                  hash.put(rollNo,name);
@@ -543,7 +542,7 @@ import java.util.logging.*;
              ch= sc.nextInt();
              switch (ch){
                  case 1->{
-                     l.info(EnterName);
+                     l.info(enterName);
                      String nameInsertFirst= sc.next();
                      l.info(s2);
                      String emailInsertFirst=sc.next();
@@ -552,7 +551,7 @@ import java.util.logging.*;
                      list.insertFirst(nameInsertFirst,emailInsertFirst,numberInsertFirst);
                  }
                  case 2->{
-                     l.info(EnterName);
+                     l.info(enterName);
                      String nameInsertLast= sc.next();
                      l.info(s2);
                      String emailInsertLast=sc.next();
@@ -561,7 +560,7 @@ import java.util.logging.*;
                      list.insertLast(nameInsertLast,emailInsertLast,numberInsertLast);
                  }
                  case 3->{
-                     l.info(EnterName);
+                     l.info(enterName);
                      String nameInsertAt=sc.next();
                      l.info(s2);
                      String emailInsertAt= sc.next();
@@ -582,7 +581,7 @@ import java.util.logging.*;
                          list.display();
                  case 8->
                  {
-                     l.info(EnterName);
+                     l.info(enterName);
                      String name=sc.next();
                      int res=list.search(name);
                      if(res>0)
