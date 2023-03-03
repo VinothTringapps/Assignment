@@ -291,6 +291,8 @@ import java.util.logging.*;
      protected  void ticTacToe(){
          TicTacToe tic=new TicTacToe();
 
+
+         int count=0;
          tic.printBoard();
          name="Player 1";
          HumanPlayer player1=new HumanPlayer(name,'X');
@@ -307,6 +309,7 @@ import java.util.logging.*;
              if(TicTacToe.checkRow() || TicTacToe.checkColumn() || TicTacToe.checkDiagonal() )
              {
                  TicTacToe.l.println(cp.name +" Win");
+                 break;
              }
              else
              {
@@ -320,9 +323,10 @@ import java.util.logging.*;
                  }
              }
          }
-         if(count==9) {
+         if(count>=9) {
              TicTacToe.l.println("Draw !");
          }
+
      }
      protected void calculator(){
          int getVariableA;
