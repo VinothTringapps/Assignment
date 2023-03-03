@@ -362,8 +362,8 @@ import java.util.logging.*;
              c.setB(getVariableB);
              int s1=c.getA();
              int s2=c.getB();
-             String s="the Value is "+c.setCal(s1,s2);
-             l.info(s);
+             String s3="the Value is "+c.setCal(s1,s2);
+             l.info(s3);
 
          }while (ch<=5);
 
@@ -446,8 +446,8 @@ import java.util.logging.*;
                  if(choice==1){
                      l.info("Enter the Value :");
                      rollNo=sc.nextInt();
-                     String s=hash.remove(rollNo);
-                     l.log(Level.INFO,()->s);
+                     String remove=hash.remove(rollNo);
+                     l.log(Level.INFO,()->remove);
                  }
                  else {
                      hash.clear();
