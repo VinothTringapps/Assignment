@@ -580,7 +580,7 @@ import java.util.logging.*;
                  case 8->
                  {
                      l.info(enterName);
-                     String name=sc.next();
+                     name=sc.next();
                      int res=list.search(name);
                      if(res>0)
                      {
