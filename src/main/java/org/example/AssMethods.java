@@ -292,7 +292,7 @@ import java.util.logging.*;
          TicTacToe tic=new TicTacToe();
 
 
-         int count=0;
+         count=0;
          tic.printBoard();
          name="Player 1";
          HumanPlayer player1=new HumanPlayer(name,'X');
