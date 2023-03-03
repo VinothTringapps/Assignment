@@ -475,25 +475,25 @@ import java.util.logging.*;
 
      }
      protected void schoolGpaTest(){
-         List<SchoolGpaTest> l=new ArrayList<>();
-         SchoolGpaTest s=new SchoolGpaTest();
+         List<SchoolGpaTest> l1=new ArrayList<>();
+         SchoolGpaTest s3=new SchoolGpaTest();
          SchoolGpaTest s1=new SchoolGpaTest();
          SchoolGpaTest s2=new SchoolGpaTest();
          Logger log=Logger.getLogger("StudentTest");
 
 
-         s.setDetails("vino",19,9.5);
-         l.add(s);
+         s3.setDetails("vino",19,9.5);
+         l1.add(s3);
          s1.setDetails("sri",20,10);
-         l.add(s1);
+         l1.add(s1);
          s2.setDetails("arun",21,8.5);
-         l.add(s2);
-         for (SchoolGpaTest li:l){
+         l1.add(s2);
+         for (SchoolGpaTest li:l1){
              log.log(Level.INFO,()->li.getName()+"\t"+li.getAge()+"\t"+li.getGpa());
          }
          Comparator<SchoolGpaTest> cam=new Comparator<>() {
-             public int compare(SchoolGpaTest s,SchoolGpaTest s1){
-                 if(s.getGpa()<s1.getGpa()){
+             public int compare(SchoolGpaTest s3,SchoolGpaTest s1){
+                 if(s3.getGpa()<s1.getGpa()){
                      return 1;
                  }
                  else
@@ -501,9 +501,9 @@ import java.util.logging.*;
 
              }
          };
-         Collections.sort(l,cam);
+         Collections.sort(l1,cam);
          log.info("After Soring the GPA score Highest to Lowest ");
-         for (SchoolGpaTest li:l){
+         for (SchoolGpaTest li:l1){
              log.log(Level.INFO,()->"Name :"+li.getName()+"\tGpa :"+li.getGpa());
          }
      }
