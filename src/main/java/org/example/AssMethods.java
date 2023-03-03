@@ -4,21 +4,23 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.logging.*;
  public class AssMethods{
-     public static int count;
-     public String name;
+     static int count;
+     String name;
      Scanner sc = new Scanner(System.in);
     Logger l = Logger.getLogger("Expection");
     String s = "----------------------------------";
+    final String EnterChoice="Enter the Choice :";
+    final String EnterName="Enter the Name :";
+    final String WrongChoice="Wrong Choice !";
     int choice;
      protected void bank(){
         l.info("Bank Application");
         l.info(s);
-        String name;
         int number;
         double amount;
         double depositAmount;
         double withDrawAmount;
-        l.info("Enter the Name :");
+        l.info(EnterName);
         name = sc.nextLine();
         l.info("\nEnter the Account Number :");
         number = sc.nextInt();
@@ -28,7 +30,7 @@ import java.util.logging.*;
         l.info("Welcome TO The Bank");
         do {
             l.info("1.Deposit \n 2.Withdraw \n 3.Show");
-            l.info("Enter the Choice :");
+            l.info(EnterChoice);
             choice = sc.nextInt();
             switch (choice) {
                 case 1 -> {
@@ -114,7 +116,7 @@ import java.util.logging.*;
         String grade;
         double gradePoints;
 
-        l.info("Enter the Name :");
+        l.info(EnterName);
         name = sc.nextLine();
         school.update();
         grade = school.grade;
@@ -126,7 +128,7 @@ import java.util.logging.*;
             switch (choice) {
                 case 1 -> s1.display();
                 case 2 -> s1.update();
-                default -> l.info("Wrong Choice !");
+                default -> l.info(WrongChoice);
             }
 
         }while(choice<=2);
@@ -212,15 +214,15 @@ import java.util.logging.*;
                  case 1-> {
                      l.info("Enter the String :");
                      String a=sc.next();
-                     lm.ListAdd(a);}
+                     lm.listAdd(a);}
                  case 2-> {
                      l.info("Enter the index :");
                      int a=sc.nextInt();
-                     lm.ListRemove(a);
+                     lm.listRemove(a);
                  }
-                 case 3-> lm.ListClear();
-                 case 4-> lm.Display();
-                 case 5-> lm.Size();
+                 case 3-> lm.listClear();
+                 case 4-> lm.display();
+                 case 5-> lm.size();
              }
          }while (choice<6);
 
@@ -230,25 +232,25 @@ import java.util.logging.*;
          Scanner sc=new Scanner(System.in);
          Logger l= Logger.getLogger("Contact");
          int ch;
-         String s1="Enter the Name :";
+
 
          do{
              l.info("1.InsertFirst \n 2.InsertLast\n3.InsertAtPos\n4.RemoveFirst\n5.RemoveLast\n6.RemoveAtPos\n7.Display\n8.search by Name");
-             l.info("Enter the Choice :");
+             l.info(EnterChoice);
              ch= sc.nextInt();
              switch (ch){
                  case 1->{
-                     l.info(s1);
+                     l.info(EnterName);
                      String nameInsertFirst= sc.next();
                      linklist.insertFirst(nameInsertFirst);
                  }
                  case 2->{
-                     l.info(s1);
+                     l.info(EnterName);
                      String nameInsertLast= sc.next();
                      linklist.insertLast(nameInsertLast);
                  }
                  case 3->{
-                     l.info(s1);
+                     l.info(EnterName);
                      String nameInsertAt=sc.next();
                      l.info("Enter the Position :");
                      int index=sc.nextInt();
@@ -265,7 +267,7 @@ import java.util.logging.*;
                          linklist.display();
                  case 8->
                  {
-                     l.info(s1);
+                     l.info(EnterName);
                      String name=sc.next();
                      int res=linklist.search(name);
                      if(res>0)
@@ -280,7 +282,7 @@ import java.util.logging.*;
                  }
 
                  default ->
-                         l.info("Wrong Choice !");
+                         l.info(WrongChoice);
 
              }
          }while(ch!=9);
@@ -331,7 +333,7 @@ import java.util.logging.*;
          Cal c=null;
          do{
              l.info("1.Addition \n 2.Subraction \n 3.Multiplication \n4.Division");
-             l.info("Enter the Choice :");
+             l.info(EnterChoice);
              ch= sc.nextInt();
              l.info("Enter the First Number :");
              getVariableA=sc.nextInt();
@@ -351,7 +353,7 @@ import java.util.logging.*;
                          c= new Division();
 
                  default ->
-                         l.info("Wrong choice !");
+                         l.info(WrongChoice);
 
 
              }
@@ -413,8 +415,8 @@ import java.util.logging.*;
          int rollNo;
          HashMap <Integer,String> hash=new HashMap<>();
          do{
-             l.info("1.Add\t2.size\t3.Remove\t4.display\nEnter the Choice :");
-
+             l.info("1.Add\t2.size\t3.Remove\t4.display\n");
+             l.info(EnterChoice);
              choice= sc.nextInt();
 
              if(choice==1){
@@ -423,7 +425,7 @@ import java.util.logging.*;
                  l.info("Enter the Roll No :");
                  rollNo=sc.nextInt();
                  sc.nextLine();
-                 l.info("Enter the Name :");
+                 l.info(EnterName);
                  name=sc.nextLine();
 
                  hash.put(rollNo,name);
@@ -434,7 +436,8 @@ import java.util.logging.*;
 
              }
              else if(choice ==3){
-                 l.info("1.value Removal\t 2.Clear\nEnter the Choice :");
+                 l.info("1.value Removal\t 2.Clear\n");
+                 l.info(EnterChoice);
                  choice=sc.nextInt();
 
 
@@ -526,16 +529,15 @@ import java.util.logging.*;
      protected void contact(){
          LinkedList list=new LinkedList();
          int ch;
-         String s1="Enter the Name :";
          String s2="Enter the Email :";
          String s3="Enter the Number :";
          do{
              l.info("1.InsertFirst \n 2.InsertLast\n3.InsertAtPos\n4.RemoveFirst\n5.RemoveLast\n6.RemoveAtPos\n7.Display\n8.search by Name");
-             l.info("Enter the Choice :");
+             l.info(EnterChoice);
              ch= sc.nextInt();
              switch (ch){
                  case 1->{
-                     l.info(s1);
+                     l.info(EnterName);
                      String nameInsertFirst= sc.next();
                      l.info(s2);
                      String emailInsertFirst=sc.next();
@@ -544,7 +546,7 @@ import java.util.logging.*;
                      list.insertFirst(nameInsertFirst,emailInsertFirst,numberInsertFirst);
                  }
                  case 2->{
-                     l.info(s1);
+                     l.info(EnterName);
                      String nameInsertLast= sc.next();
                      l.info(s2);
                      String emailInsertLast=sc.next();
@@ -553,7 +555,7 @@ import java.util.logging.*;
                      list.insertLast(nameInsertLast,emailInsertLast,numberInsertLast);
                  }
                  case 3->{
-                     l.info(s1);
+                     l.info(EnterName);
                      String nameInsertAt=sc.next();
                      l.info(s2);
                      String emailInsertAt= sc.next();
@@ -574,7 +576,7 @@ import java.util.logging.*;
                          list.display();
                  case 8->
                  {
-                     l.info(s1);
+                     l.info(EnterName);
                      String name=sc.next();
                      int res=list.search(name);
                      if(res>0)
@@ -590,7 +592,7 @@ import java.util.logging.*;
                  }
 
                  default ->
-                         l.info("Wrong Choice !");
+                         l.info(WrongChoice);
 
              }
          }while(ch!=9);

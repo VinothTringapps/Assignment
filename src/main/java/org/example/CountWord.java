@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Map;
 import java.util.Scanner;
 
-public class CountWord {
+class CountWord {
     static void countWords(String fileName, Map<String, Integer> words) throws FileNotFoundException {
         Scanner file = new Scanner(new File(fileName));
         while (file.hasNext()) {
